@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pix {
+    background-color: black;
+    border: 1px solid red;
+    box-sizing: border-box;
+    width: 4vw;
+    height: 4vw;
+}
+
+.no-pix {
+    background-color: white;
+    border: 1px solid red;
+    box-sizing: border-box;
+    width: 4vw;
+    height: 4vw;
+}
+
+.gen {
+    position: absolute;
+    bottom: 2vh;
+}
+
+.matrix {
+    width: 32vw;
+    height: 32vw;
+    left: 34vw;
+    top: 20vh;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    flex-wrap: wrap;
+}
