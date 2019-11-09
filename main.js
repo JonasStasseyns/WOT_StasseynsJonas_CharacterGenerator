@@ -14,6 +14,7 @@ const matrix = document.querySelector('.matrix');
 
 let char = new Array(64).fill(0);
 let key = ''
+let realtimeMode = true
 
 function loadCanvas() {
     // console.log(char)
@@ -30,7 +31,9 @@ function loadCanvas() {
         matrix.appendChild(pixel)
     }
     // console.log(char)
-    updateFirebase()
+    if(realtimeMode){
+        updateFirebase()
+    }
 }
 
 function updateFirebase() {

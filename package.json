@@ -1,0 +1,19 @@
+{
+  "name": "wot_stasseynsjonas_charactergenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "deploy": "firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonasStasseyns/WOT_StasseynsJonas_CharacterGenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonasStasseyns/WOT_StasseynsJonas_CharacterGenerator/issues"
+  },
+  "homepage": "https://github.com/JonasStasseyns/WOT_StasseynsJonas_CharacterGenerator#readme"
+}

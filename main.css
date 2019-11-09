@@ -1,22 +1,25 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: #212121;
 }
 
 .pix {
-    background-color: black;
-    border: 1px solid red;
+    background-color: whitesmoke;
+    margin: 0.2vw;
     box-sizing: border-box;
     width: 4vw;
     height: 4vw;
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.3);
 }
 
 .no-pix {
-    background-color: white;
-    border: 1px solid red;
+    background-color: #212121;
+    margin: 0.2vw;
     box-sizing: border-box;
     width: 4vw;
     height: 4vw;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 .gen {
@@ -25,7 +28,7 @@
 }
 
 .matrix {
-    width: 32vw;
+    width: 35.2vw;
     height: 32vw;
     left: 34vw;
     top: 20vh;
