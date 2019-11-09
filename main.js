@@ -13,11 +13,12 @@ document.querySelector('.gen').addEventListener('click', saveToFirebase)
 const matrix = document.querySelector('.matrix');
 
 let char = new Array(64).fill(0);
+let key = ''
 
 function loadCanvas() {
-    console.log(char)
+    // console.log(char)
     matrix.innerHTML = ''
-    for(let i = 0; i < char.length; i++){
+    for (let i = 0; i < char.length; i++) {
         const pixel = document.createElement('div')
         pixel.classList.add((char[i] === 0) ? 'no-pix' : 'pix')
         pixel.id = i.toString();
@@ -28,11 +29,22 @@ function loadCanvas() {
         })
         matrix.appendChild(pixel)
     }
-    console.log(char)
+    // console.log(char)
+    updateFirebase()
+}
+
+function updateFirebase() {
+    if (key === '') {
+        console.log('emptykey')
+        key = saveToFirebase()
+    }else{
+        console.log(key)
+        firebase.database().ref(`/${key}`).update(char)
+    }
 }
 
 function saveToFirebase() {
-    firebase.database().ref('/').push(char)
+    return firebase.database().ref('/').push(char).getKey()
 }
 
 loadCanvas()
