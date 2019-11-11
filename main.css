@@ -30,10 +30,57 @@
 .matrix {
     width: 35.2vw;
     height: 32vw;
-    left: 34vw;
+    left: 32.4vw;
     top: 20vh;
     display: flex;
     flex-direction: row;
     position: absolute;
     flex-wrap: wrap;
+}
+
+.center-title {
+    text-align: center;
+    font-family: sans-serif;
+    color: #F0F1F5;
+    font-weight: normal;
+    margin-top: 10vh;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding: 0 1vw;
+}
+
+.thumb {
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5vw
+}
+
+.t-pix {
+    width: 0.625vw;
+    height: 0.625vw;
+    background-color: #F0F1F5;
+}
+
+.t-nopix {
+    width: 0.625vw;
+    height: 0.625vw;
+}
+
+.list-title {
+    font-family: sans-serif;
+    color: #F0F1F5;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.list-container {
+    width: 20vw;
 }

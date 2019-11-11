@@ -9,12 +9,12 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-document.querySelector('.gen').addEventListener('click', saveToFirebase)
+const list = document.querySelector('.list');
 const matrix = document.querySelector('.matrix');
 
 let char = new Array(64).fill(0);
 let key = ''
-let realtimeMode = true
+let init = true
 
 function loadCanvas() {
     // console.log(char)
@@ -31,23 +31,46 @@ function loadCanvas() {
         matrix.appendChild(pixel)
     }
     // console.log(char)
-    if(realtimeMode){
+    if (!init) {
         updateFirebase()
     }
+    init = false
 }
 
 function updateFirebase() {
     if (key === '') {
         console.log('emptykey')
         key = saveToFirebase()
-    }else{
+    } else {
         console.log(key)
-        firebase.database().ref(`/${key}`).update(char)
+        firebase.database().ref('/').update({
+            [key]: char.join()
+        })
     }
 }
 
 function saveToFirebase() {
-    return firebase.database().ref('/').push(char).getKey()
+    return firebase.database().ref('/').push(char.join()).getKey()
 }
 
 loadCanvas()
+
+function showList() {
+    firebase.database().ref('/').on('value', (snap) => {
+        list.innerHTML = ''
+        snap.forEach((val) => {
+            const thumb = document.createElement('div')
+            thumb.classList.add('thumb')
+            thumb.id = val.key
+            const valArr = val.val().split(',')
+            valArr.forEach((pix) => {
+                thumb.innerHTML += (pix === "1") ? '<div class="thumb-pix t-pix"></div>' : '<div class="thumb-pix t-nopix"></div>';
+            })
+            list.appendChild(thumb)
+        })
+    })
+}
+
+
+
+showList()
