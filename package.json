@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/JonasStasseyns/WOT_StasseynsJonas_CharacterGenerator/issues"
   },
-  "homepage": "https://github.com/JonasStasseyns/WOT_StasseynsJonas_CharacterGenerator#readme"
+  "homepage": "https://github.com/JonasStasseyns/WOT_StasseynsJonas_CharacterGenerator#readme",
+  "dependencies": {
+    "a-color-picker": "^1.2.1",
+    "ngx-color-picker": "^8.2.0",
+    "vanilla-picker": "^2.10.0"
+  }
 }
