@@ -2,7 +2,7 @@
   "name": "wot_stasseynsjonas_charactergenerator",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "assets/js/main.js",
   "scripts": {
     "deploy": "firebase deploy"
   },
